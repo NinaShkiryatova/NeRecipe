@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basicStepLayout"
+    android:layout_margin="@dimen/common_spacing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/stepNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Step 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/min_spacing" />
+
+    <TextView
+        android:id="@+id/stepDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepNumber"
+        android:layout_margin="@dimen/min_spacing"
+        tools:text="Peel the vegetables and cut them"/>
+
+    <EditText
+        android:id="@+id/editedStepDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepNumber"
+        android:layout_margin="@dimen/min_spacing"
+        tools:text="Peel the vegetables and cut them"/>
+
+    <ImageButton
+        android:id="@+id/editStepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/stepDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_edit_24" />
+
+    <ImageButton
+        android:id="@+id/saveStepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="@id/editedStepDescription"
+        app:layout_constraintBottom_toBottomOf="@id/editedStepDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_save_green_24" />
+
+    <ImageView
+        android:id="@+id/stepIllustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editedStepDescription"
+        android:layout_marginTop="@dimen/min_spacing"
+        android:layout_marginBottom="@dimen/min_spacing"
+        tools:srcCompat="@drawable/default_picture" />
+
+    <ImageButton
+        android:id="@+id/deleteIllustrationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="visible"
+        tools:clickable="false"
+        app:layout_constraintTop_toTopOf="@id/stepIllustration"
+        app:layout_constraintEnd_toEndOf="@id/stepIllustration"
+        android:layout_margin="@dimen/min_spacing"
+        android:background="@color/purple_500"
+        app:srcCompat="@drawable/ic_clear_24" />
+
+    <Button
+        android:id="@+id/addIllustrationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editedStepDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/mid_spacing"
+        android:text="Add picture"
+        tools:clickable="false"
+        tools:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/deleteStepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"
+        android:background="@color/purple_500"
+        app:srcCompat="@drawable/ic_clear_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

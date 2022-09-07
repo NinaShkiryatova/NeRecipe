@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RecipeBook</string>
+    <string name="logo_picture">Logo picture</string>
+    <string name="menu_button">Menu button</string>
+    <string name="chooseFiltersText">Check one or more necessary categories:</string>
+    <string name="european_cuisine_name">European cuisine</string>
+    <string name="asian_cuisine_name">Asian cuisine</string>
+    <string name="pan_asian_cuisine_name">Pan-Asian cuisine</string>
+    <string name="oriental_cuisine_name">Oriental cuisine</string>
+    <string name="american_cuisine_name">American cuisine</string>
+    <string name="russian_cuisine_name">Russian cuisine</string>
+    <string name="mediterranean_cuisine_name">Mediterranean cuisine</string>
+    <string name="apply_filters">Apply filters</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="categories_menu_button">Categories menu button</string>
+    <string name="add_new_recipe_button">Add new recipe button</string>
+    <string name="save_step">Save step</string>
+    <string name="enter_new_step">Enter new step</string>
+    <string name="choose_the_category">Choose the category:</string>
+    <string name="enter_the_author_s_name">Enter the author\'s name</string>
+    <string name="enter_the_title_of_recipe">Enter the title of recipe</string>
+    <string name="recipe_title">Recipe title:</string>
+</resources>

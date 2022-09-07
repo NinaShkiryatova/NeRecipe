@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/recipeListFragment">
+
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="ru.mycompany.recipebook.activity.RecipeListFragment"
+        android:label="RecipeListFragment" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_singleRecipeFragment"
+            app:destination="@id/singleRecipeFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_newRecipeFragment"
+            app:destination="@id/newRecipeFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_editRecipeFragment"
+            app:destination="@id/editRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleRecipeFragment"
+        android:name="ru.mycompany.recipebook.activity.SingleRecipeFragment"
+        android:label="SingleRecipeFragment" >
+        <action
+            android:id="@+id/action_singleRecipeFragment_to_editRecipeFragment"
+            app:destination="@id/editRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRecipeFragment"
+        android:name="ru.mycompany.recipebook.activity.EditRecipeFragment"
+        android:label="EditRecipeFragment" />
+    <fragment
+        android:id="@+id/newRecipeFragment"
+        android:name="ru.mycompany.recipebook.activity.NewRecipeFragment"
+        android:label="NewRecipeFragment" />
+</navigation>

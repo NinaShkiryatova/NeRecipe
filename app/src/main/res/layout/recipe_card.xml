@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basicRecipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/logoPict"
+        android:layout_width="@dimen/max_spacing"
+        android:layout_height="@dimen/max_spacing"
+        android:layout_marginStart="@dimen/min_spacing"
+        android:layout_marginTop="@dimen/min_spacing"
+        android:contentDescription="@string/logo_picture"
+        android:paddingTop="@dimen/min_spacing"
+        android:paddingBottom="@dimen/min_spacing"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recipeName"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/logoPict"
+        android:layout_marginStart="@dimen/common_spacing"
+        app:layout_constraintStart_toEndOf="@id/logoPict"
+        app:layout_constraintEnd_toStartOf="@id/menu"
+        tools:text="Рецепт яичницы от дочери, фирменный, исключительно вкусный (прям огонь)!"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_spacing"
+        android:layout_marginStart="@dimen/common_spacing"
+        app:layout_constraintStart_toEndOf="@id/logoPict"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"
+        tools:text="Author"/>
+
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_spacing"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"
+        app:layout_constraintStart_toStartOf="@id/categoryName"
+        tools:text="Дочь"
+        />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/min_spacing"
+        android:layout_marginBottom="@dimen/common_spacing"
+        app:layout_constraintStart_toEndOf="@id/logoPict"
+        app:layout_constraintTop_toBottomOf="@id/author"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Category" />
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_spacing"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginBottom="@dimen/common_spacing"
+        app:layout_constraintTop_toBottomOf="@id/author"
+        app:layout_constraintStart_toEndOf="@id/category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Завтраки"
+        />
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/recipeName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/common_spacing"
+        android:src="@drawable/ic_menu_24"
+        android:background="@android:color/transparent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

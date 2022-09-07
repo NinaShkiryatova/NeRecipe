@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RecipeCardBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/logoPict"
+        android:layout_width="@dimen/big_spacing"
+        android:layout_height="@dimen/big_spacing"
+        android:layout_marginStart="@dimen/min_spacing"
+        android:layout_marginTop="@dimen/min_spacing"
+        android:contentDescription="@string/logo_picture"
+        android:paddingTop="@dimen/min_spacing"
+        android:paddingBottom="@dimen/min_spacing"
+        android:src="@drawable/logo_big"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recipeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_spacing"
+        app:layout_constraintEnd_toStartOf="@id/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Рецепт яичницы от дочери, фирменный, исключительно вкусный!" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/min_spacing"
+        android:layout_marginStart="@dimen/common_spacing"
+        app:layout_constraintBottom_toBottomOf="@id/logoPict"
+        app:layout_constraintStart_toEndOf="@id/logoPict"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"
+        tools:text="Category: "
+        />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/categoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginBottom="@dimen/min_spacing"
+        app:layout_constraintBottom_toBottomOf="@id/logoPict"
+        app:layout_constraintStart_toEndOf="@id/category"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"
+        tools:text="Завтраки" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/min_spacing"
+        android:layout_marginStart="@dimen/common_spacing"
+        app:layout_constraintBottom_toBottomOf="@id/logoPict"
+        app:layout_constraintStart_toEndOf="@id/logoPict"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        app:layout_constraintBottom_toTopOf="@id/headerBarrier"
+        tools:text="Author: "
+
+        />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/authorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/min_spacing"
+        app:layout_constraintBottom_toBottomOf="@id/logoPict"
+        app:layout_constraintStart_toStartOf="@id/categoryName"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        app:layout_constraintBottom_toTopOf="@id/headerBarrier"
+        tools:text="Дочь" />
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mid_spacing"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/menu_button"
+        android:src="@drawable/ic_menu_24"
+        app:layout_constraintStart_toEndOf="@id/recipeName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/headerBarrier"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/headerBarrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="logoPict, authorName, menu" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stepsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headerBarrier"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:listitem="@layout/recipe_step_edit_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

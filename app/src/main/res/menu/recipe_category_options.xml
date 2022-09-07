@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/european_cuisine"
+        android:title="@string/european_cuisine_name"/>
+    <item android:id="@+id/asian_cuisine"
+        android:title="@string/asian_cuisine_name"/>
+    <item android:id="@+id/pan_asian_cuisine"
+        android:title="@string/pan_asian_cuisine_name"/>
+    <item android:id="@+id/oriental_cuisine"
+        android:title="@string/oriental_cuisine_name"/>
+    <item android:id="@+id/american_cuisine"
+        android:title="@string/american_cuisine_name"/>
+    <item android:id="@+id/russian_cuisine"
+        android:title="@string/russian_cuisine_name"/>
+    <item android:id="@+id/mediterranean_cuisine"
+        android:title="@string/mediterranean_cuisine_name"/>
+</menu>
