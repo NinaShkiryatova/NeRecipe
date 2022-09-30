@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/nameSearchButton"
-        android:text="Input the recipe name" />
+        android:hint="@string/input_the_recipe_name" />
 
     <ImageButton
         android:id="@+id/nameSearchButton"
@@ -57,12 +57,39 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/allRecipes"
         app:layout_constraintTop_toTopOf="@id/searchAndFiltersBarrier"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:listitem="@layout/recipe_card"
-        />
+        tools:layout_editor_absoluteX="-72dp"
+        tools:visibility="visible"
+        tools:listitem="@layout/recipe_card" />
+
+    <LinearLayout
+        android:id="@+id/noInfoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/searchAndFiltersBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/noInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/mid_spacing"
+            android:text="@string/no_recipes_found"
+            />
+
+        <ImageView
+            android:id="@+id/noInfoPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_info_pict"
+            />
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -70,8 +97,35 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/common_spacing"
         android:src="@drawable/ic_add_24"
-        app:backgroundTint="@color/purple_500"
+        android:backgroundTint="@color/green"
         app:tint="@null"
+        app:layout_constraintBottom_toTopOf="@id/favouriteRecipes"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/add_new_recipe" />
+
+    <Button
+        android:id="@+id/allRecipes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/min_spacing"
+        android:layout_marginEnd="@dimen/min_spacing"
+        android:backgroundTint="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/favouriteRecipes"
+        android:text="@string/all_recipes" />
+
+    <Button
+        android:id="@+id/favouriteRecipes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:layout_marginStart="@dimen/min_spacing"
+        android:layout_marginEnd="@dimen/min_spacing"
+        app:layout_constraintStart_toEndOf="@id/allRecipes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/favourites" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

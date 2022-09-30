@@ -7,14 +7,15 @@
 
     <EditText
         android:id="@+id/recipeTitle"
-        android:layout_width="match_parent"
+        android:inputType="textMultiLine"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/common_spacing"
         android:ems="10"
         android:hint="@string/enter_the_title_of_recipe"
-        android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addRecipeButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -24,7 +25,7 @@
         android:layout_margin="@dimen/common_spacing"
         android:ems="10"
         android:hint="@string/enter_the_author_s_name"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recipeTitle" />
@@ -68,33 +69,22 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/stepText"
+        app:layout_constraintBottom_toTopOf="@+id/addStepButton"
         app:layout_constraintTop_toTopOf="@id/upStepsBarrier"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="-16dp"
-        tools:listitem="@layout/recipe_step_edit_card" />
+        tools:listitem="@layout/recipe_step_card" />
 
-    <EditText
-        android:id="@+id/stepText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/common_spacing"
-        android:ems="10"
-        android:hint="@string/enter_new_step"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/addStepButton"
-        app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/addStepButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/common_spacing"
+            android:backgroundTint="@color/green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text="@string/save_step" />
+            android:text="@string/add_step" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addRecipeButton"

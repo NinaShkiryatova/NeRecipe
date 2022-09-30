@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NeRecipe</string>
+    <string name="logo_picture">Картинка логотипа</string>
+    <string name="menu_button">Кнопка меню</string>
+    <string name="chooseFiltersText">Выберите одну или несколько категорий:</string>
+    <string name="european_cuisine_name">Европейская кухня</string>
+    <string name="asian_cuisine_name">Азиатская кухня</string>
+    <string name="pan_asian_cuisine_name">Паназиатская кухня</string>
+    <string name="oriental_cuisine_name">Восточная кухня</string>
+    <string name="american_cuisine_name">Американская кухня</string>
+    <string name="russian_cuisine_name">Русская кухня</string>
+    <string name="mediterranean_cuisine_name">Средиземноморская кухня</string>
+    <string name="apply_filters">Применить фильтры</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="categories_menu_button">Кнопка меню категорий</string>
+    <string name="add_new_recipe_button">Кнопка добавления нового рецепта</string>
+    <string name="add_step">Добавить шаг</string>
+    <string name="enter_new_step">Добавьте новый шаг</string>
+    <string name="choose_the_category">Выберите категорию:</string>
+    <string name="enter_the_author_s_name">Введите имя автора</string>
+    <string name="enter_the_title_of_recipe">Введите название рецепта</string>
+    <string name="recipe_title">Название рецепта:</string>
+    <string name="no_recipes_found">Извините, рецептов нет…</string>
+    <string name="add_picture">Добавить картинку</string>
+    <string name="input_the_recipe_name">Введите название рецепта</string>
+    <string name="edit_step_title">Изменить описание шага:</string>
+    <string name="enter_step_description">Добавьте описание шага:</string>
+    <string name="category">Категория:</string>
+    <string name="author">Автор:</string>
+    <string name="add_new_recipe">Добавить новый рецепт</string>
+    <string name="all_recipes">Все рецепты</string>
+    <string name="favourites">Избранное</string>
+</resources>

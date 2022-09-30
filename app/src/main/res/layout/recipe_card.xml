@@ -16,7 +16,8 @@
         android:contentDescription="@string/logo_picture"
         android:paddingTop="@dimen/min_spacing"
         android:paddingBottom="@dimen/min_spacing"
-        android:src="@drawable/logo"
+        android:src="@drawable/icon"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,6 +47,8 @@
 
     <TextView
         android:id="@+id/authorName"
+        android:singleLine="true"
+        android:maxEms="10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/min_spacing"
@@ -68,13 +71,16 @@
 
     <TextView
         android:id="@+id/categoryName"
-        android:layout_width="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/min_spacing"
         android:layout_marginStart="@dimen/common_spacing"
         android:layout_marginBottom="@dimen/common_spacing"
         app:layout_constraintTop_toBottomOf="@id/author"
         app:layout_constraintStart_toEndOf="@id/category"
+        app:layout_constraintEnd_toEndOf="@+id/recipeName"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="Завтраки"
         />
@@ -86,11 +92,21 @@
         app:layout_constraintStart_toEndOf="@id/recipeName"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/favouriteButton"
         android:layout_margin="@dimen/common_spacing"
         android:src="@drawable/ic_menu_24"
         android:background="@android:color/transparent"
         />
+
+    <ToggleButton
+        android:id="@+id/favouriteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:theme="@style/toggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RecipeBook</string>
+    <string name="app_name">NeRecipe</string>
     <string name="logo_picture">Logo picture</string>
     <string name="menu_button">Menu button</string>
     <string name="chooseFiltersText">Check one or more necessary categories:</string>
@@ -15,10 +15,20 @@
     <string name="edit">Edit</string>
     <string name="categories_menu_button">Categories menu button</string>
     <string name="add_new_recipe_button">Add new recipe button</string>
-    <string name="save_step">Save step</string>
+    <string name="add_step">Add new step</string>
     <string name="enter_new_step">Enter new step</string>
     <string name="choose_the_category">Choose the category:</string>
     <string name="enter_the_author_s_name">Enter the author\'s name</string>
     <string name="enter_the_title_of_recipe">Enter the title of recipe</string>
     <string name="recipe_title">Recipe title:</string>
+    <string name="no_recipes_found">No recipes found, sorry…</string>
+    <string name="add_picture">Add picture</string>
+    <string name="input_the_recipe_name">Input the recipe name</string>
+    <string name="edit_step_title">Edit step description:</string>
+    <string name="enter_step_description">Enter step description:</string>
+    <string name="category">Category: </string>
+    <string name="author">Author: </string>
+    <string name="add_new_recipe">Add new recipe</string>
+    <string name="all_recipes">All recipes</string>
+    <string name="favourites">Favourites</string>
 </resources>
